@@ -433,7 +433,7 @@ def eval_genomes(genomes, config):
 
 config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                      neat.DefaultSpeciesSet, neat.DefaultStagnation,
-                     'config.txt')
+                     'config.txt') #Make sure config.txt is in the same file as this script
 
 pop = neat.Population(config)
 stats = neat.StatisticsReporter()
@@ -445,7 +445,7 @@ print(winner)
 
 print(best_genome_list)
 
-outputDir = '/Users/Godwyn Lai/PycharmProjects/Basketball/venv'
+outputDir = '/Users/Godwyn Lai/PycharmProjects/Basketball/venv' #Add where you want to output the resulting file about the best genome to
 os.chdir(outputDir)
 serialNo = len(os.listdir(outputDir)) + 1
 outputFile = open(str(serialNo) + '_' + str(int(MAX_FITNESS)) + '.p', 'wb')
